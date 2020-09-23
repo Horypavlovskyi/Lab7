@@ -3,20 +3,35 @@ package ua.zp.brainacad;
 
 public class Circle {
 
-public int radius;
+public double radius;
 public double length;
 public double area;
 public String color;
+public double basis;
 
-    public Circle(int radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public Circle(int radius, String color) {
+    @Override
+    public String toString() {
+        return " " +
+                "Размер пиццы " + radius + ""
+//                ", length=" + length +
+//                ", area=" + area +
+//                ", color='" + color + '\'' +
+//                ", basis=" + basis +
+                ;
+    }
+
+    public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
         this.area = Math.pow(radius, 2) * Math.PI;
         this.length = 2 * Math.PI * radius;
+        this.basis = basis;
+
+
 
     }
 /**

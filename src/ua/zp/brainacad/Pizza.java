@@ -1,9 +1,9 @@
 package ua.zp.brainacad;
 
 public class Pizza {
-    double basis;
-    String composition;
-    String name;
+    public Circle basis;
+    public String composition;
+    public String name;
     int cost;
 
     @Override
@@ -14,8 +14,8 @@ public class Pizza {
                 " Цена: " + cost + " грн. " + "\n";
     }
 
-    public Pizza(double basis, String composition, String name, int cost) {
-        this.basis = basis;
+    public Pizza(double radius, String composition, String name, int cost) {
+        this.basis = new Circle(radius * 2);
         this.composition = composition;
         this.name = name;
         this.cost = cost;
